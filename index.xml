@@ -1,24 +1,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>dillyant&#39;s world</title>
-    <link>https://dillyant.github.io/</link>
+    <link>http://dillyant.github.io/</link>
     <description>Recent content on dillyant&#39;s world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>dillyant copyright.</copyright>
     <lastBuildDate>Tue, 26 May 2015 13:07:22 +0800</lastBuildDate>
     
-        <atom:link href="https://dillyant.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://dillyant.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>Vimrc</title>
-        <link>https://dillyant.github.io/post/vimrc/</link>
+        <link>http://dillyant.github.io/post/vimrc/</link>
         <pubDate>Tue, 26 May 2020 11:41:14 +0800</pubDate>
         
-        <guid>https://dillyant.github.io/post/vimrc/</guid>
-        <description>dillyant&#39;s world https://dillyant.github.io/post/vimrc/ -&lt;pre&gt;&lt;code&gt;if empty(glob(&#39;~/.vim/autoload/plug.vim&#39;))
+        <guid>http://dillyant.github.io/post/vimrc/</guid>
+        <description>dillyant&#39;s world http://dillyant.github.io/post/vimrc/ -&lt;pre&gt;&lt;code&gt;if empty(glob(&#39;~/.vim/autoload/plug.vim&#39;))
 	silent !curl -fkLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
@@ -683,20 +683,20 @@ let g:formatdef_my_custom_c = &#39;&amp;quot;astyle --mode=c --style=kr -T4 -N -
 &amp;quot;let g:UltiSnipsJumpForwardTrigger=&amp;quot;&amp;lt;C-j&amp;gt;&amp;quot;
 &amp;quot;let g:UltiSnipsJumpBackwardTrgger=&amp;quot;&amp;lt;C-k&amp;gt;&amp;quot;
 
-&lt;/code&gt;&lt;/pre&gt;- https://dillyant.github.io/post/vimrc/ - dillyant copyright.</description>
+&lt;/code&gt;&lt;/pre&gt;- http://dillyant.github.io/post/vimrc/ - dillyant copyright.</description>
         </item>
     
     
     
         <item>
         <title>关于</title>
-        <link>https://dillyant.github.io/about/</link>
+        <link>http://dillyant.github.io/about/</link>
         <pubDate>Tue, 26 May 2015 13:07:22 +0800</pubDate>
         
-        <guid>https://dillyant.github.io/about/</guid>
-        <description>dillyant&#39;s world https://dillyant.github.io/about/ -&lt;h3 id=&#34;dillyant&#34;&gt;dillyant&lt;/h3&gt;
+        <guid>http://dillyant.github.io/about/</guid>
+        <description>dillyant&#39;s world http://dillyant.github.io/about/ -&lt;h3 id=&#34;dillyant&#34;&gt;dillyant&lt;/h3&gt;
 &lt;p&gt;I am dillyant. First try Hugo&lt;/p&gt;
-- https://dillyant.github.io/about/ - dillyant copyright.</description>
+- http://dillyant.github.io/about/ - dillyant copyright.</description>
         </item>
     
     

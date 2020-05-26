@@ -1,15 +1,703 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>A Hugo Site</title>
+    <title>dillyant&#39;s world</title>
     <link>https://dillyant.github.io/</link>
-    <description>Recent content on A Hugo Site</description>
+    <description>Recent content on dillyant&#39;s world</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>This is a customized copyright.</copyright>
+    <language>en</language>
+    <copyright>dillyant copyright.</copyright>
+    <lastBuildDate>Tue, 26 May 2015 13:07:22 +0800</lastBuildDate>
     
         <atom:link href="https://dillyant.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
+    
+        <item>
+        <title>Vimrc</title>
+        <link>https://dillyant.github.io/post/vimrc/</link>
+        <pubDate>Tue, 26 May 2020 11:41:14 +0800</pubDate>
+        
+        <guid>https://dillyant.github.io/post/vimrc/</guid>
+        <description>dillyant&#39;s world https://dillyant.github.io/post/vimrc/ -&lt;pre&gt;&lt;code&gt;if empty(glob(&#39;~/.vim/autoload/plug.vim&#39;))
+	silent !curl -fkLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+
+&amp;quot;*****************************************************
+&amp;quot;                                                    *
+&amp;quot;       general配置                                  *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+&amp;quot; With a map leader it&#39;s possible to do extra key combinations
+&amp;quot; like &amp;lt;leader&amp;gt;w saves the current file
+&amp;quot; If &amp;quot;mapleader&amp;quot; is not set or empty, a backslash is used  instead.
+let mapleader = &amp;quot;,&amp;quot;
+let g:mapleader = &amp;quot;,&amp;quot;
+
+set t_Co=256
+
+set ttymouse=xterm2
+&amp;quot; Switch syntax highlighting on, when the terminal has colors
+syntax enable
+
+&amp;quot;允许未保存切换buffer 隐藏buff
+set hidden
+
+&amp;quot;可以在buffer的任何地方使用鼠标
+&amp;quot;set mouse=a
+&amp;quot;set selection=exclusive
+&amp;quot;set selectmode=mouse,key
+
+&amp;quot;复制之前的缩进
+set copyindent
+
+&amp;quot;Threshold for reporting number of lines changed
+set report=0
+
+&amp;quot; Set to auto read when a file is changed from the outside
+set autoread
+
+&amp;quot;Write the contents of the file, if it has been modified
+set autowrite
+
+&amp;quot;显示行号
+set number
+&amp;quot;set relativenumber
+
+set ttyfast
+
+&amp;quot;历史记录数
+set history=1000
+
+&amp;quot;Always show current position
+set ruler
+
+&amp;quot;show (partial) command keys in the status line
+set showcmd
+
+&amp;quot;Height of the command bar
+set cmdheight=2
+
+&amp;quot; Configure backspace so it acts as it should act
+set backspace=eol,start,indent
+set whichwrap+=b,s,&amp;lt;,&amp;gt;,[,],h,l
+
+&amp;quot;带有如下符号的单词不要换行分割
+set iskeyword+=$,@,%,#
+
+&amp;quot; Ignore case when searching
+set ignorecase
+
+&amp;quot; When searching try to be smart about cases
+set smartcase
+
+&amp;quot; Highlight search results
+set hlsearch
+
+&amp;quot; Makes search act like search in modern browsers
+set incsearch
+
+&amp;quot; Don&#39;t redraw while executing macros (good performance config)
+set lazyredraw
+
+&amp;quot; For regular expressions turn magic on
+set magic
+
+&amp;quot; Show matching brackets when text indicator is over them
+set showmatch
+
+&amp;quot;匹配括号高亮的时间（单位是十分之一秒）
+set matchtime=1
+
+&amp;quot;匹配括号的规则，增加针对html的&amp;lt;&amp;gt;
+set matchpairs=(:),{:},[:],&amp;lt;:&amp;gt;
+
+&amp;quot; No annoying sound on errors
+set noerrorbells
+
+&amp;quot; no visualbell
+set novisualbell
+
+&amp;quot; Add a bit extra margin to the left
+set foldcolumn=1
+
+&amp;quot;在处理未保存或只读文件的时候，弹出确认
+set confirm
+
+&amp;quot;设置光标高亮显示
+&amp;quot;set cursorline
+&amp;quot;set cursorcolumn
+
+&amp;quot;光标移动到buffer的顶部和底部时保持3行距离
+set scrolloff=3
+
+&amp;quot; Always show the status line
+set laststatus=2
+&amp;quot;set statusline=%F%m%r%h%w\ [FORMAT=%{&amp;amp;ff}:%{&amp;amp;fenc!=&#39;&#39;?&amp;amp;fenc:&amp;amp;enc}]\ [TYPE=%Y]\ [ROW=%03l/%L(%p%%)]\ [COL=%03v]
+
+&amp;quot;Set utf8 as standard encoding
+set encoding=utf-8
+set termencoding=utf-8
+set fileencoding=utf-8
+&amp;quot;gb2312
+&amp;quot;set termencoding=gb2312
+&amp;quot;set fileencoding=gb2312
+&amp;quot;cp936 = gb2312
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+
+&amp;quot; Use spaces instead of tabs, 1 tab == 4 spaces
+&amp;quot;set expandtab
+set smarttab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set shiftround
+
+&amp;quot;自动换行
+set wrap
+set cindent
+set autoindent
+set smartindent
+
+&amp;quot;字符间插入的像素数目
+set linespace=0
+
+&amp;quot;增强模式中的命令行自动完成操作
+set wildmenu
+
+&amp;quot; Remember info about open buffers on close
+set viminfo^=%
+
+&amp;quot; Turn backup off, since most stuff is in SVN, git et.c anyway...
+set noswapfile
+
+&amp;quot; Return to last edit position when opening files (You want this!)
+autocmd BufReadPost *
+			\ if line(&amp;quot;&#39;\&amp;quot;&amp;quot;) &amp;gt; 0 &amp;amp;&amp;amp; line(&amp;quot;&#39;\&amp;quot;&amp;quot;) &amp;lt;= line(&amp;quot;$&amp;quot;) |
+			\   exe &amp;quot;normal! g`\&amp;quot;&amp;quot; |
+			\ endif
+
+&amp;quot; :W sudo saves the file
+&amp;quot; (useful for handling the permission-denied error)
+command W w !sudo tee % &amp;gt; /dev/null
+
+&amp;quot; Treat long lines as break lines (useful when moving around in them)
+map j gj
+map k gk
+
+&amp;quot; 快速保存
+inoremap jk &amp;lt;esc&amp;gt;:w&amp;lt;cr&amp;gt;
+
+&amp;quot; 快速缩进
+vnoremap &amp;lt; &amp;lt;gv
+vnoremap &amp;gt; &amp;gt;gv
+
+&amp;quot; Disable highlight when &amp;lt;leader&amp;gt;&amp;lt;cr&amp;gt; is pressed
+map &amp;lt;silent&amp;gt; &amp;lt;leader&amp;gt;&amp;lt;cr&amp;gt; :noh&amp;lt;cr&amp;gt;
+
+&amp;quot; Opens a new tab with the current buffer&#39;s path
+&amp;quot; Super useful when editing files in the same directory
+map &amp;lt;leader&amp;gt;te :tabedit &amp;lt;c-r&amp;gt;=expand(&amp;quot;%:p:h&amp;quot;)&amp;lt;cr&amp;gt;/
+
+&amp;quot; Toggle paste mode on and off
+map &amp;lt;leader&amp;gt;pp :setlocal paste!&amp;lt;cr&amp;gt;
+
+&amp;quot;ROT13 encrypt
+map &amp;lt;F12&amp;gt; ggVGg?
+
+
+&amp;quot; Remove the Windows ^M - when the encodings gets messed up
+noremap &amp;lt;leader&amp;gt;m mmHmt:%s/&amp;lt;C-V&amp;gt;&amp;lt;cr&amp;gt;//ge&amp;lt;cr&amp;gt;&#39;tzt&#39;m
+
+
+&amp;quot;*****************************************************
+&amp;quot;                                                    *
+&amp;quot;       vim-plug配置                                 *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+
+call plug#begin(&#39;~/.vim/plugged&#39;)
+
+&amp;quot;配色方案
+Plug &#39;morhetz/gruvbox&#39;
+Plug &#39;flazz/vim-colorschemes&#39;
+
+&amp;quot;显示函数原型
+Plug &#39;vim-scripts/echofunc.vim&#39;
+
+&amp;quot;文本对象组合使用能让更改成对的符号异常方便
+&amp;quot;Plug &#39;tpope/vim-surround&#39;
+
+&amp;quot;markdown
+&amp;quot;Plug &#39;suan/vim-instant-markdown&#39;, {&#39;for&#39;: &#39;markdown&#39;}
+
+&amp;quot;代码模板
+Plug &#39;vim-scripts/c.vim&#39;
+&amp;quot;Plug &#39;SirVer/ultisnips&#39;
+
+&amp;quot;符号列表
+Plug &#39;vim-scripts/taglist.vim&#39;
+Plug &#39;vim-scripts/Tagbar&#39;
+
+&amp;quot;头文件和源文件跳转
+Plug &#39;vim-scripts/a.vim&#39;
+
+&amp;quot;模糊查找
+&amp;quot;Plug &#39;Yggdroot/LeaderF&#39;
+
+&amp;quot;状态栏
+Plug &#39;vim-airline/vim-airline&#39;
+Plug &#39;vim-airline/vim-airline-themes&#39;
+&amp;quot;Plug &#39;Lokaltog/vim-powerline&#39;
+
+&amp;quot;代码高亮
+Plug &#39;octol/vim-cpp-enhanced-highlight&#39;
+
+&amp;quot;代码注释
+Plug &#39;scrooloose/nerdcommenter&#39;
+
+&amp;quot;补全
+Plug &#39;vim-scripts/OmniCppComplete&#39;
+&amp;quot;Plug &#39;ycm-core/YouCompleteMe&#39;
+&amp;quot;Plug &#39;Raimondi/delimitMate&#39;
+
+&amp;quot;树形目录
+Plug &#39;scrooloose/nerdtree&#39;, { &#39;on&#39;:  &#39;NERDTreeToggle&#39; }
+Plug &#39;jistr/vim-nerdtree-tabs&#39;
+&amp;quot;Plug &#39;fholgado/minibufexpl.vim&#39;
+
+&amp;quot;版本控制
+&amp;quot;Plug &#39;mhinz/vim-signify&#39;
+&amp;quot;Plug &#39;Xuyuanp/nerdtree-git-plugin&#39;
+
+&amp;quot;代码检测
+&amp;quot;Plug &#39;dense-analysis/ale&#39;
+
+&amp;quot;快速跳转
+&amp;quot;Plug &#39;justinmk/vim-sneak&#39;
+
+&amp;quot;多光标
+&amp;quot;Plug &#39;terryma/vim-multiple-cursors&#39;
+
+&amp;quot;tags管理
+Plug &#39;ludovicchabant/vim-gutentags&#39;
+Plug &#39;skywind3000/gutentags_plus&#39;
+Plug &#39;skywind3000/vim-preview&#39;
+
+&amp;quot;格式化
+&amp;quot;Plug &#39;godlygeek/tabular&#39;
+&amp;quot;Plug &#39;junegunn/vim-easy-align&#39;
+Plug &#39;Chiel92/vim-autoformat&#39;
+
+call plug#end()
+
+
+&amp;quot;*****************************************************
+&amp;quot;                                                    *
+&amp;quot;       colorscheme配置                                     *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+&amp;quot;colorscheme atom
+colorscheme molokai
+&amp;quot;colorscheme luna-term
+&amp;quot;
+&amp;quot;colorscheme gruvbox
+&amp;quot;let g:gruvbox_contrast_light=&amp;quot;light&amp;quot;
+&amp;quot;let g:gruvbox_contrast_dark=&amp;quot;hard&amp;quot;
+&amp;quot;let g:gruvbox_improved_warnings=1
+
+
+&amp;quot;*****************************************************
+&amp;quot;                                                    *
+&amp;quot;       tags配置                                     *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+&amp;quot;ctags -I __THROW -I __attribute_pure__ -I __nonnull -I __attribute__ --if0=yes --languages=c,c++ --c-kinds=+p --c++-kinds=+p --fields=+iaS --extras=+q -R -f ~/.vim/systags /usr/include /usr/local/include
+
+&amp;quot;//;不可省略 表示当前目录不存在tags，则在父目录中寻找
+set tags=tags;
+set tags+=/root/.vim/systags
+set path+=/usr/include,/usr/local/include/
+
+&amp;quot;map &amp;lt;F4&amp;gt; :!ctags -R --languages=c,c++ --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q &amp;lt;cr&amp;gt;
+
+&amp;quot;*****************************************************
+&amp;quot;                                                    *
+&amp;quot;       Cscope配置                                   *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+if has(&amp;quot;cscope&amp;quot;)
+	&amp;quot; 指定用来执行cscope的命令
+	&amp;quot;set csprg=/usr/bin/cscope 
+	&amp;quot; 指定用来执行cscope的命令
+	set csprg=/usr/bin/gtags-cscope 
+	&amp;quot; 设置cstag命令查找次序：0先找cscope数据库再找标签文件；1先找标签文件再找cscope数据库
+	set csto=1 
+	&amp;quot; 同时搜索cscope数据库和标签文件
+	set cst 
+	&amp;quot; 使用QuickFix窗口来显示cscope查找结果
+	set cscopequickfix=s-,c-,d-,i-,t-,e-,a- 
+endif
+
+&amp;quot;*****************************************************
+&amp;quot;                                                    *
+&amp;quot;       NERDCommenter配置                            *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+&amp;quot;&amp;lt;leader&amp;gt;cc 注释当前选中文本
+&amp;quot;&amp;lt;leader&amp;gt;cu 取消选中文本块的注释。
+&amp;quot;&amp;lt;leader&amp;gt;cm 只用一组符号注释
+&amp;quot;&amp;lt;leader&amp;gt;cA 在行尾添加注释
+&amp;quot;&amp;lt;leader&amp;gt;c$ /* 注释 */
+&amp;quot;&amp;lt;leader&amp;gt;cs /* 块注释 */
+&amp;quot;&amp;lt;leader&amp;gt;cy 注释并复制
+&amp;quot;&amp;lt;leader&amp;gt;c&amp;lt;space&amp;gt; 注释/取消注释
+&amp;quot;&amp;lt;leader&amp;gt;ca 切换　// 和 /* */
+let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = &#39;left&#39;
+let g:NERDCustomDelimiters = {
+			\ &#39;javascript&#39;: { &#39;left&#39;: &#39;//&#39;, &#39;leftAlt&#39;: &#39;/**&#39;, &#39;rightAlt&#39;: &#39;*/&#39; },
+			\ &#39;less&#39;: { &#39;left&#39;: &#39;/**&#39;, &#39;right&#39;: &#39;*/&#39; }
+			\ }
+
+&amp;quot;*****************************************************
+&amp;quot;                                                    *
+&amp;quot;    scrooloose/nerdtree                             *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+nmap &amp;lt;leader&amp;gt;nt :NERDTreeToggle&amp;lt;cr&amp;gt;
+map &amp;lt;left&amp;gt; &amp;lt;ESC&amp;gt;:NERDTreeToggle&amp;lt;RETURN&amp;gt;
+let NERDTreeChDirMode=2
+let NERDTreeWinSize=35
+let NERDTreeShowBookmarks=1
+let NERDTreeShowFiles=1
+let NERDTreeShowHidden=1
+let NERDTreeShowLineNumbers=1
+let NERDTreeHighlightCursorline=1
+let NERDTreeWinPos=&amp;quot;left&amp;quot;
+let NERDTreeIgnore=[ &#39;\.pyc$&#39;, &#39;\.pyo$&#39;, &#39;\.obj$&#39;, &#39;\.o$&#39;, &#39;\.so$&#39;, &#39;\.egg$&#39;, &#39;^\.git$&#39;, &#39;^\.svn$&#39;, &#39;^\.hg$&#39;, &#39;\~$&#39;, &#39;\.swp$&#39;]
+
+let g:NERDTreeShowIgnoredStatus = 1
+let g:nerdtree_tabs_open_on_console_startup=1
+let g:NERDTreeIndicatorMapCustom = {
+			\ &amp;quot;Modified&amp;quot;  : &amp;quot;✹&amp;quot;,
+			\ &amp;quot;Staged&amp;quot;    : &amp;quot;✚&amp;quot;,
+			\ &amp;quot;Untracked&amp;quot; : &amp;quot;✭&amp;quot;,
+			\ &amp;quot;Renamed&amp;quot;   : &amp;quot;➜&amp;quot;,
+			\ &amp;quot;Unmerged&amp;quot;  : &amp;quot;═&amp;quot;,
+			\ &amp;quot;Deleted&amp;quot;   : &amp;quot;✖&amp;quot;,
+			\ &amp;quot;Dirty&amp;quot;     : &amp;quot;✗&amp;quot;,
+			\ &amp;quot;Clean&amp;quot;     : &amp;quot;✔︎&amp;quot;,
+			\ &#39;Ignored&#39;   : &#39;☒&#39;,
+			\ &amp;quot;Unknown&amp;quot;   : &amp;quot;?&amp;quot;
+			\ }
+
+
+&amp;quot;*****************************************************
+&amp;quot;                                                    *
+&amp;quot;       taglist配置                                  *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+nmap &amp;lt;leader&amp;gt;tl :Tlist&amp;lt;CR&amp;gt;&amp;lt;c-l&amp;gt;
+map &amp;lt;right&amp;gt; &amp;lt;ESC&amp;gt;:Tlist&amp;lt;RETURN&amp;gt;
+let Tlist_Ctags_Cmd=&amp;quot;ctags&amp;quot;
+&amp;quot; 只显示当前文件的tags
+let Tlist_Show_One_File        = 1             
+&amp;quot; 非当前文件，自动折叠
+let Tlist_File_Fold_Auto_Close = 1             
+&amp;quot; 在右侧窗口中显示
+let Tlist_Use_Right_Window     = 1             
+&amp;quot;tems in tags sorted by name
+let Tlist_Sort_Type = &amp;quot;name&amp;quot;                  
+&amp;quot; 如果Taglist窗口是最后一个窗口则退出Vim
+let Tlist_Exit_OnlyWindow      = 1             
+&amp;quot;实时更新tags
+let Tlist_Process_File_Always  = 1
+let Tlist_Inc_Winwidth = 0                     
+let Tlist_Show_Menu=1
+let Tlist_Use_SingleClick=0
+let Tlist_Process_File_Always=1
+let Tlist_GainFocus_On_ToggleOpen = 1
+
+&amp;quot;*****************************************************
+&amp;quot;                                                    *
+&amp;quot;       tagbar配置                                   *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+&amp;quot;&amp;lt;leader&amp;gt;tb 打开tagbar窗口
+nmap &amp;lt;leader&amp;gt;tb :TagbarToggle&amp;lt;CR&amp;gt;
+let g:tarbar_width=35
+let g:tagbar_autofocus = 1
+
+&amp;quot;*****************************************************
+&amp;quot;                                                    *
+&amp;quot;       a.vim配置                                    *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+&amp;quot;切换源文件头文件 a.vim
+&amp;quot;:A 在同一tab切换源文件/头文件
+&amp;quot;:AV 竖向切割窗口,打开对应的源文件/头文件
+&amp;quot;:AS 横向切割窗口,打开对应的源文件/头文件
+
+&amp;quot;*****************************************************
+&amp;quot;                                                    *
+&amp;quot;       echofunc配置                                 *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+let g:EchoFuncKeyNext=&#39;&amp;lt;leader&amp;gt;n&#39;
+let g:EchoFuncKeyPrev=&#39;&amp;lt;leader&amp;gt;p&#39;
+let g:EchoFuncAutoStartBalloonDeclaration = 1
+
+
+&amp;quot;*****************************************************
+&amp;quot;                                                    *
+&amp;quot;        omnicppcomplete配置                         *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+set completeopt=menuone,menu,longest
+let OmniCpp_MayCompleteDot = 1 &amp;quot; autocomplete with .
+let OmniCpp_MayCompleteArrow = 1 &amp;quot; autocomplete with -&amp;gt;
+let OmniCpp_MayCompleteScope = 1 &amp;quot; autocomplete with ::
+let OmniCpp_NamespaceSearch = 0 &amp;quot; search namespaces in this and included files
+let OmniCpp_ShowPrototypeInAbbr = 1 &amp;quot; show function prototype in popup window
+let OmniCpp_DisplayMode=1 &amp;quot; Class scope completion mode: always show all members
+let OmniCpp_ShowScopeInAbbr=1 &amp;quot; show scope in abbreviation and remove the last column
+let OmniCpp_DefaultNamespaces = [&amp;quot;std&amp;quot;, &amp;quot;gapnet&amp;quot;]
+
+
+&amp;quot;*****************************************************
+&amp;quot;                                                    *
+&amp;quot;        vim-airline                                     *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+&amp;quot;let g:airline_theme=&#39;papercolor&#39;
+&amp;quot;let g:airline_theme=&amp;quot;ravenpower&amp;quot;
+&amp;quot;let g:airline_theme=&amp;quot;minimalist&amp;quot;
+let g:airline_theme=&amp;quot;kolor&amp;quot;
+&amp;quot; let g:airline_theme=&amp;quot;jellybeans&amp;quot;
+&amp;quot; let g:airline_theme=&amp;quot;distinguished&amp;quot;
+&amp;quot; let g:airline_theme=&amp;quot;base16_google&amp;quot;
+&amp;quot; let g:airline_theme=&amp;quot;behelit&amp;quot;
+&amp;quot;
+
+
+&amp;quot;*****************************************************
+&amp;quot;                                                    *
+&amp;quot;   vim-instant-markdown                             *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+
+&amp;quot;let g:instant_markdown_slow = 1
+&amp;quot;let g:instant_markdown_autostart = 0
+
+
+&amp;quot;*****************************************************
+&amp;quot;                                                    *
+&amp;quot;  tabular                                           *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+&amp;quot; 冒号对齐：:Tab /:
+&amp;quot; 逗号对齐 :Tabularize /,
+&amp;quot; 运行上一个对齐命令 :Tab
+&amp;quot; // 对齐（需要 escape）: :Tab /\/\/
+
+&amp;quot;*****************************************************
+&amp;quot;                                                    *
+&amp;quot;  vim-easy-align                                    *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+&amp;quot;xmap ga &amp;lt;Plug&amp;gt;(EasyAlign)
+&amp;quot;nmap ga &amp;lt;Plug&amp;gt;(EasyAlign)
+
+&amp;quot;*****************************************************
+&amp;quot;                                                    *
+&amp;quot;  dense-analysis/ale								 *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+&amp;quot; 对应语言需要安装相应的检查工具
+&amp;quot;    let g:ale_linters_explicit = 1 &amp;quot;除g:ale_linters指定，其他不可用
+&amp;quot;    let g:ale_linters = {
+&amp;quot;\   &#39;cpp&#39;: [&#39;cppcheck&#39;,&#39;clang&#39;,&#39;gcc&#39;],
+&amp;quot;\   &#39;c&#39;: [&#39;cppcheck&#39;,&#39;clang&#39;, &#39;gcc&#39;],
+&amp;quot;\   &#39;python&#39;: [&#39;pylint&#39;],
+&amp;quot;\   &#39;bash&#39;: [&#39;shellcheck&#39;],
+&amp;quot;\   &#39;go&#39;: [&#39;golint&#39;],
+&amp;quot;\}
+&amp;quot;
+&amp;quot;let g:ale_sign_column_always = 1
+&amp;quot;let g:ale_completion_delay = 500
+&amp;quot;let g:ale_echo_delay = 20
+&amp;quot;let g:ale_lint_delay = 500
+&amp;quot;let g:ale_echo_msg_format = &#39;[%linter%] %code: %%s&#39;
+&amp;quot;let g:ale_lint_on_text_changed = &#39;normal&#39;
+&amp;quot;let g:ale_lint_on_insert_leave = 1
+&amp;quot;let g:airline#extensions#ale#enabled = 1
+&amp;quot;&amp;quot;let g:ale_set_quickfix = 1
+&amp;quot;&amp;quot;let g:ale_open_list = 1&amp;quot;打开quitfix对话框
+&amp;quot;
+&amp;quot;let g:ale_c_gcc_options = &#39;-Wall -O2 -std=c99&#39;
+&amp;quot;let g:ale_cpp_gcc_options = &#39;-Wall -O2 -std=c++14&#39;
+&amp;quot;let g:ale_c_cppcheck_options = &#39;&#39;
+&amp;quot;let g:ale_cpp_cppcheck_options = &#39;&#39;
+&amp;quot;
+&amp;quot;let g:ale_sign_error = &amp;quot;&amp;gt;&amp;gt;&amp;quot;
+&amp;quot;let g:ale_sign_warning = &amp;quot;--&amp;quot;
+
+&amp;quot;*****************************************************
+&amp;quot; vim-gutentags                                      
+&amp;quot; 此插件需要单独安装ctags 和 gtags
+&amp;quot; ctags:  https://github.com/universal-ctags/ctags
+&amp;quot; gtags: https://www.gnu.org/software/global/download.html
+&amp;quot;************************************************************
+&amp;quot; 将自动生成的 tags 文件全部放入 ~/.cache/tags 目录中，避免污染工程目录
+let s:vim_tags = expand(&#39;~/.cache/tags&#39;)
+let g:gutentags_cache_dir = s:vim_tags
+
+&amp;quot; 检测 ~/.cache/tags 不存在就新建
+if !isdirectory(s:vim_tags)
+	silent! call mkdir(s:vim_tags, &#39;p&#39;)
+endif
+&amp;quot;在项目根目录 touch 一个空的名为 .root 的文件
+&amp;quot; gutentags 搜索工程目录的标志，当前文件路径向上递归直到碰到这些文件/目录名
+let g:gutentags_project_root = [&#39;.root&#39;, &#39;.svn&#39;, &#39;.git&#39;, &#39;.hg&#39;, &#39;.project&#39;]
+
+&amp;quot; 所生成的数据文件的名称
+let g:gutentags_ctags_tagfile = &#39;.tags&#39;
+
+&amp;quot; 同时开启 ctags 和 gtags 支持：
+let g:gutentags_modules = []
+if executable(&#39;ctags&#39;)
+	let g:gutentags_modules += [&#39;ctags&#39;]
+endif
+if executable(&#39;gtags-cscope&#39;) &amp;amp;&amp;amp; executable(&#39;gtags&#39;)
+	let g:gutentags_modules += [&#39;gtags_cscope&#39;]
+endif
+
+&amp;quot; 配置 ctags 的参数
+let g:gutentags_ctags_extra_args = [&#39;--fields=+niazS&#39;, &#39;--extra=+q&#39;]
+let g:gutentags_ctags_extra_args += [&#39;--c++-kinds=+px&#39;]
+let g:gutentags_ctags_extra_args += [&#39;--c-kinds=+px&#39;]
+
+&amp;quot; 如果使用 universal ctags 需要增加下面一行
+let g:gutentags_ctags_extra_args += [&#39;--output-format=e-ctags&#39;]
+
+&amp;quot; 禁用 gutentags 自动加载 gtags 数据库的行为
+let g:gutentags_auto_add_gtags_cscope = 0
+
+&amp;quot; change focus to quickfix window after search (optional).
+let g:gutentags_plus_switch = 1
+
+&amp;quot;预览 quickfix 窗口 ctrl-w z 关闭
+&amp;quot;往上滚动预览窗口
+noremap &amp;lt;Leader&amp;gt;u :PreviewScroll -1&amp;lt;cr&amp;gt;
+&amp;quot;往下滚动预览窗口
+noremap &amp;lt;leader&amp;gt;d :PreviewScroll +1&amp;lt;cr&amp;gt;
+&amp;quot;打开预览窗口
+autocmd FileType qf nnoremap &amp;lt;silent&amp;gt;&amp;lt;buffer&amp;gt; p :PreviewQuickfix&amp;lt;cr&amp;gt;
+autocmd FileType qf nnoremap &amp;lt;silent&amp;gt;&amp;lt;buffer&amp;gt; P :PreviewClose&amp;lt;cr&amp;gt;
+
+&amp;quot;*****************************************************
+&amp;quot;                                                    *
+&amp;quot; Yggdroot/LeaderF									 *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+&amp;quot; Ctrl + p 打开文件搜索
+let g:Lf_ShortcutF = &#39;&amp;lt;c-f&amp;gt;&#39;
+&amp;quot; 打开函数列表
+noremap &amp;lt;leader&amp;gt;lf :LeaderfFunction&amp;lt;cr&amp;gt;
+
+
+&amp;quot;*****************************************************
+&amp;quot;                                                    *
+&amp;quot; vim-autoformat                                     *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+
+noremap &amp;lt;leader&amp;gt;af :Autoformat&amp;lt;CR&amp;gt;:w&amp;lt;CR&amp;gt;
+&amp;quot;写入时自动格式化
+&amp;quot;au BufWrite * :Autoformat
+
+&amp;quot;debug mode
+let g:autoformat_verbosemode=1
+
+let g:formatters_cpp = [&#39;my_custom_cpp&#39;]
+let g:formatdef_my_custom_cpp = &#39;&amp;quot;astyle --mode=c --style=kr -T4 -N -U -y -p -xg -H -k3 -j -xb -m0 -M40 -n -xC100\&amp;lt;CR&amp;gt;&amp;quot;&#39;
+
+let g:formatters_c = [&#39;my_custom_c&#39;]
+let g:formatdef_my_custom_c = &#39;&amp;quot;astyle --mode=c --style=kr -T4 -N -U -y -p -xg -H -k3 -j -xb -m0 -M40 -n -xC100\&amp;lt;CR&amp;gt;&amp;quot;&#39;
+
+
+&amp;quot;*****************************************************
+&amp;quot;                                                    *
+&amp;quot; YouCompleteMe                                      *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+&amp;quot;let g:ycm_use_clangd = 0
+&amp;quot;let g:ycm_global_ycm_extra_conf =&#39;~/.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py&#39;
+&amp;quot;let g:ycm_confirm_extra_conf = 0
+&amp;quot;let g:ycm_seed_identifiers_with_syntax=1
+&amp;quot;let g:ycm_error_symbol = &#39;E&amp;gt;&#39;
+&amp;quot;let g:ycm_warning_symbol = &#39;W&amp;gt;&#39;
+&amp;quot;注释与字符串中的内容也用于补全
+&amp;quot;let g:ycm_collect_identifiers_from_comments_and_strings = 1 
+&amp;quot;在注释输入中也能补全
+&amp;quot;let g:ycm_complete_in_comments = 1                          
+&amp;quot;在字符串输入中也能补全
+&amp;quot;let g:ycm_complete_in_strings = 1                           
+&amp;quot;映射按键,没有这个会拦截掉tab, 导致其他插件的tab不能用.
+&amp;quot;let g:ycm_key_list_select_completion = [&#39;&amp;lt;c-n&amp;gt;&#39;, &#39;&amp;lt;Down&amp;gt;&#39;]  
+&amp;quot;let g:ycm_key_list_previous_completion = [&#39;&amp;lt;c-p&amp;gt;&#39;, &#39;&amp;lt;Up&amp;gt;&#39;]
+&amp;quot; 禁用语法检查
+&amp;quot;let g:ycm_show_diagnostics_ui = 0                           
+&amp;quot;
+&amp;quot;let g:ycm_semantic_triggers =  {
+&amp;quot;      \ &#39;c,cpp,python,java,go,erlang,perl&#39;: [&#39;re!\w{2}&#39;],
+&amp;quot;      \ &#39;cs,lua,javascript&#39;: [&#39;re!\w{2}&#39;],
+&amp;quot;      \}
+&amp;quot;
+&amp;quot;&amp;quot;回车即选中当前项
+&amp;quot;inoremap &amp;lt;expr&amp;gt; &amp;lt;CR&amp;gt; pumvisible() ? &amp;quot;\&amp;lt;C-y&amp;gt;&amp;quot; : &amp;quot;\&amp;lt;CR&amp;gt;&amp;quot;
+&amp;quot;autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+&amp;quot;&amp;quot;****************************************************
+&amp;quot;                                                    *
+&amp;quot;octol/vim-cpp-enhanced-highlight                    *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+&amp;quot;let g:cpp_class_scope_highlight = 1
+&amp;quot;let g:cpp_member_variable_highlight = 1
+&amp;quot;let g:cpp_concepts_highlight = 1
+&amp;quot;let g:cpp_experimental_simple_template_highlight = 1
+&amp;quot; 文件较大时使用下面的设置高亮模板速度较快，但会有一些小错误
+&amp;quot; let g:cpp_experimental_template_highlight = 1
+
+
+&amp;quot;&amp;quot;****************************************************
+&amp;quot;                                                    *
+&amp;quot; UltiSnips                                          *
+&amp;quot;                                                    *
+&amp;quot;*****************************************************
+&amp;quot;let g:UltiSnipsExpandTrigger=&amp;quot;&amp;lt;C-j&amp;gt;&amp;quot;
+&amp;quot;let g:UltiSnipsListSnippets=&amp;quot;&amp;lt;C-e&amp;gt;&amp;quot;
+&amp;quot;let g:UltiSnipsJumpForwardTrigger=&amp;quot;&amp;lt;C-j&amp;gt;&amp;quot;
+&amp;quot;let g:UltiSnipsJumpBackwardTrgger=&amp;quot;&amp;lt;C-k&amp;gt;&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;- https://dillyant.github.io/post/vimrc/ - dillyant copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>关于</title>
+        <link>https://dillyant.github.io/about/</link>
+        <pubDate>Tue, 26 May 2015 13:07:22 +0800</pubDate>
+        
+        <guid>https://dillyant.github.io/about/</guid>
+        <description>dillyant&#39;s world https://dillyant.github.io/about/ -&lt;h3 id=&#34;dillyant&#34;&gt;dillyant&lt;/h3&gt;
+&lt;p&gt;I am dillyant. First try Hugo&lt;/p&gt;
+- https://dillyant.github.io/about/ - dillyant copyright.</description>
+        </item>
     
     
   </channel>

@@ -1,34 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on A Hugo Site</title>
-    <link>https://dillyant.github.io/posts/</link>
-    <description>Recent content in Posts on A Hugo Site</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>This is a customized copyright.</copyright>
-    
-	<atom:link href="https://dillyant.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>helloworld</title>
-      <link>https://dillyant.github.io/posts/helloworld/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dillyant.github.io/posts/helloworld/</guid>
-      <description>shell变量 变量名和等号之间不能有空格 your_name=&amp;quot;runoob.com&amp;quot; 推荐给所有变量加上花括号 echo ${your_name}  已定义的变量，可以被重新定义 your_name=&amp;quot;tom&amp;quot;echo $your_nameyour_name=&amp;quot;alibaba&amp;quot;echo $your_name 第二次赋值的时候不能写$your_name=&amp;quot;alibaba&amp;rdquo;，使用变量的时候才加美元符号($)
-删除变量 使用 unset 命令可以删除变量
-unset variable_name Shell 字符串 字符串可以用单引号，也可以用双引号，也可以不用引号。
-单引号 单引号的限制：
-  单引号里的任何字符都会原样输出，单引号字符串中的变量是无效的；
-  单引号字串中不能出现单独一个的单引号（对单引号使用转义符后也不行），但可成对出现，作为字符串拼接使用。
-  双引号 双引号的优点：
-  双引号里可以有变量
-  双引号里可以出现转义字符
-  获取字符串长度 string=&amp;quot;abcd&amp;quot;echo ${#string} #输出 4 提取子字符串 以下实例从字符串第 2 个字符开始截取 4 个字符：
- string=&amp;quot;runoob is a great site&amp;quot;echo ${string:1:4} # 输出 unoo 查找子字符串 查找字符 i 或 o 的位置(哪个字母先出现就计算哪个)：</description>
-    </item>
-    
-  </channel>
-</rss>

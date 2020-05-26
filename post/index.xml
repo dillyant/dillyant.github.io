@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on dillyant&#39;s world</title>
-    <link>http://dillyant.github.io/post/</link>
+    <link>https://dillyant.github.io/post/</link>
     <description>Recent content in Posts on dillyant&#39;s world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>dillyant copyright.</copyright>
     <lastBuildDate>Tue, 26 May 2020 11:41:14 +0800</lastBuildDate>
     
-	<atom:link href="http://dillyant.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dillyant.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Vimrc</title>
-      <link>http://dillyant.github.io/post/vimrc/</link>
+      <link>https://dillyant.github.io/post/vimrc/</link>
       <pubDate>Tue, 26 May 2020 11:41:14 +0800</pubDate>
       
-      <guid>http://dillyant.github.io/post/vimrc/</guid>
+      <guid>https://dillyant.github.io/post/vimrc/</guid>
       <description>if empty(glob(&#39;~/.vim/autoload/plug.vim&#39;))silent !curl -fkLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vimautocmd VimEnter * PlugInstall --sync | source $MYVIMRCendif&amp;quot;*****************************************************&amp;quot; *&amp;quot; general配置 *&amp;quot; *&amp;quot;*****************************************************&amp;quot; With a map leader it&#39;s possible to do extra key combinations&amp;quot; like &amp;lt;leader&amp;gt;w saves the current file&amp;quot; If &amp;quot;mapleader&amp;quot; is not set or empty, a backslash is used instead.let mapleader = &amp;quot;,&amp;quot;let g:mapleader = &amp;quot;,&amp;quot;set t_Co=256set ttymouse=xterm2&amp;quot; Switch syntax highlighting on, when the terminal has colorssyntax enable&amp;quot;允许未保存切换buffer 隐藏buffset hidden&amp;quot;可以在buffer的任何地方使用鼠标&amp;quot;set mouse=a&amp;quot;set selection=exclusive&amp;quot;set selectmode=mouse,key&amp;quot;复制之前的缩进set copyindent&amp;quot;Threshold for reporting number of lines changedset report=0&amp;quot; Set to auto read when a file is changed from the outsideset autoread&amp;quot;Write the contents of the file, if it has been modifiedset autowrite&amp;quot;显示行号set number&amp;quot;set relativenumberset ttyfast&amp;quot;历史记录数set history=1000&amp;quot;Always show current positionset ruler&amp;quot;show (partial) command keys in the status lineset showcmd&amp;quot;Height of the command barset cmdheight=2&amp;quot; Configure backspace so it acts as it should actset backspace=eol,start,indentset whichwrap+=b,s,&amp;lt;,&amp;gt;,[,],h,l&amp;quot;带有如下符号的单词不要换行分割set iskeyword+=$,@,%,#&amp;quot; Ignore case when searchingset ignorecase&amp;quot; When searching try to be smart about casesset smartcase&amp;quot; Highlight search resultsset hlsearch&amp;quot; Makes search act like search in modern browsersset incsearch&amp;quot; Don&#39;t redraw while executing macros (good performance config)set lazyredraw&amp;quot; For regular expressions turn magic onset magic&amp;quot; Show matching brackets when text indicator is over themset showmatch&amp;quot;匹配括号高亮的时间（单位是十分之一秒）set matchtime=1&amp;quot;匹配括号的规则，增加针对html的&amp;lt;&amp;gt;set matchpairs=(:),{:},[:],&amp;lt;:&amp;gt;&amp;quot; No annoying sound on errorsset noerrorbells&amp;quot; no visualbellset novisualbell&amp;quot; Add a bit extra margin to the leftset foldcolumn=1&amp;quot;在处理未保存或只读文件的时候，弹出确认set confirm&amp;quot;设置光标高亮显示&amp;quot;set cursorline&amp;quot;set cursorcolumn&amp;quot;光标移动到buffer的顶部和底部时保持3行距离set scrolloff=3&amp;quot; Always show the status lineset laststatus=2&amp;quot;set statusline=%F%m%r%h%w\ [FORMAT=%{&amp;amp;ff}:%{&amp;amp;fenc!</description>
     </item>
     

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on dillyant&#39;s world</title>
-    <link>http://dillyant.github.io/categories/</link>
+    <link>https://dillyant.github.io/categories/</link>
     <description>Recent content in Categories on dillyant&#39;s world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>dillyant copyright.</copyright>
     <lastBuildDate>Tue, 26 May 2020 11:41:14 +0800</lastBuildDate>
     
-	<atom:link href="http://dillyant.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dillyant.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>vim</title>
-      <link>http://dillyant.github.io/categories/vim/</link>
+      <link>https://dillyant.github.io/categories/vim/</link>
       <pubDate>Tue, 26 May 2020 11:41:14 +0800</pubDate>
       
-      <guid>http://dillyant.github.io/categories/vim/</guid>
+      <guid>https://dillyant.github.io/categories/vim/</guid>
       <description></description>
     </item>
     

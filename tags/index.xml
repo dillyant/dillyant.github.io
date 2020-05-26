@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on dillyant&#39;s world</title>
-    <link>http://dillyant.github.io/tags/</link>
+    <link>https://dillyant.github.io/tags/</link>
     <description>Recent content in Tags on dillyant&#39;s world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>dillyant copyright.</copyright>
     <lastBuildDate>Tue, 26 May 2020 11:41:14 +0800</lastBuildDate>
     
-	<atom:link href="http://dillyant.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dillyant.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>vimrc</title>
-      <link>http://dillyant.github.io/tags/vimrc/</link>
+      <link>https://dillyant.github.io/tags/vimrc/</link>
       <pubDate>Tue, 26 May 2020 11:41:14 +0800</pubDate>
       
-      <guid>http://dillyant.github.io/tags/vimrc/</guid>
+      <guid>https://dillyant.github.io/tags/vimrc/</guid>
       <description></description>
     </item>
     
